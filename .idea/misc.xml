@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/button_background.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/button_background_disabled.xml" value="0.2887179487179487" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/button_background_enabled.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/edit_text_background.xml" value="0.2887179487179487" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/edit_text_background_error.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/drawable/ic_insta_camera.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/InstagramCurso/app/src/main/res/layout/button_loading.xml" value="0.2441123188405797" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

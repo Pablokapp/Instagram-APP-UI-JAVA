@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="enter">Entrar</string>
+    <string name="or">OU</string>
+    <string name="enter_with_facebook">ENTRAR COM O FACEBOOK</string>
+    <string name="does_not_have_account">Não tem uma conta ? Cadastre-se.</string>
+</resources>
