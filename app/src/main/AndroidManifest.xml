@@ -11,15 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramCurso"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity
-            android:name=".login.presentation.LoginActivity"
+            android:name="register.RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="login.LoginActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 

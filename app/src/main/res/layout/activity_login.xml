@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".login.presentation.LoginActivity">
+    tools:context="login.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,35 +30,34 @@
                 android:id="@+id/login_edit_text_email_input"
                 style="@style/InstaFormEditTextInput"
                 app:errorTextAppearance="@style/InstaFormEditTextError"
-                app:hintEnabled = "false"
-                >
+                app:hintEnabled="false">
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_edit_text_email"
-                style="@style/InstaFormEditText"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/login_edit_text_email"
+                    style="@style/InstaFormEditText"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_edit_text_password_input"
                 style="@style/InstaFormEditTextInput"
                 app:errorTextAppearance="@style/InstaFormEditTextError"
-                app:hintEnabled = "false">
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_edit_text_password"
-                style="@style/InstaFormEditText"
-                android:hint="@string/password"
-                android:inputType="textPassword" />
+                app:hintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/login_edit_text_password"
+                    style="@style/InstaFormEditText"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.example.instagramcurso.login.presentation.TestButton
+            <login.LoadingButton
                 android:id="@+id/login_button_enter"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:text="@string/enter" />
 
             <FrameLayout

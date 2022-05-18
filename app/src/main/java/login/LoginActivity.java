@@ -1,4 +1,4 @@
-package com.example.instagramcurso.login.presentation;
+package login;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.EditText;
 
 import com.example.instagramcurso.R;
@@ -15,7 +14,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TestButton buttonEnter;
+    private LoadingButton buttonEnter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +29,13 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword.addTextChangedListener(watcher);
 
         buttonEnter = findViewById(R.id.login_button_enter);
-        buttonEnter.setOnClickListener(v -> {
+
+        buttonEnter.setOnClickListener(v ->
+        {
             buttonEnter.showProgress(true);
 
-            new Handler().postDelayed(() ->{
-            buttonEnter.showProgress(false);
+            new Handler().postDelayed(() -> {
+                buttonEnter.showProgress(false);
 
                 TextInputLayout inputLayoutTest = findViewById(R.id.login_edit_text_email_input);
                 inputLayoutTest.setError("Esse email é inválido");
@@ -50,17 +51,11 @@ public class LoginActivity extends AppCompatActivity {
             }, 4000);
         });
 
-
-
-
-
-
-
-    }
+    }//onCreate
 
     //watcher escuta os eventos de input em um editor de texto
     // referencia para text watcher instanciado
-    private TextWatcher watcher = new TextWatcher() {
+    private final TextWatcher watcher = new TextWatcher() {
         //watcher é uma interface precisa implementar
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -70,12 +65,16 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             //se a string recebida na campo de texto não for vazia -> ativar o botão
-            if (!charSequence.toString().isEmpty())
-                findViewById(R.id.login_button_enter).setEnabled(true);
-                //se não desativar o botão
-            else
-                findViewById(R.id.login_button_enter).setEnabled(false);
+            //se não desativar o botão
+            findViewById(R.id.login_button_enter).setEnabled(!charSequence.toString().isEmpty());
 
+
+            // if (!charSequence.toString().isEmpty())
+            //                findViewById(R.id.login_button_enter).setEnabled(true);
+            //                //se não desativar o botão
+            //            else
+            //                findViewById(R.id.login_button_enter).setEnabled(false);
+            //        }
         }
 
         @Override

@@ -1,4 +1,4 @@
-package com.example.instagramcurso.login.presentation;
+package login;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
@@ -19,23 +18,23 @@ import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.example.instagramcurso.R;
 
-public class TestButton extends FrameLayout {
+public class LoadingButton extends FrameLayout {
 
     private AppCompatButton button;
     private ProgressBar progressBar;
     private String text;
 
-    public TestButton(@NonNull Context context) {
+    public LoadingButton(@NonNull Context context) {
         super(context);
         setup(context, null);
     }
 
-    public TestButton(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public LoadingButton(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         setup(context, attrs);
     }
 
-    public TestButton(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LoadingButton(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         setup(context, attrs);
@@ -58,11 +57,11 @@ public class TestButton extends FrameLayout {
         button.setEnabled(false);
 
         progressBar = (ProgressBar) getChildAt(1);
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             Drawable wrap = DrawableCompat.wrap(progressBar.getIndeterminateDrawable());
-            DrawableCompat.setTint(wrap,ContextCompat.getColor(context, android.R.color.white));
+            DrawableCompat.setTint(wrap, ContextCompat.getColor(context, android.R.color.white));
             progressBar.setIndeterminateDrawable(DrawableCompat.unwrap(wrap));
-        }else{
+        } else {
             progressBar.getIndeterminateDrawable().setColorFilter(
                     ContextCompat.getColor(context, android.R.color.white), PorterDuff.Mode.SRC_IN);
         }
@@ -76,11 +75,11 @@ public class TestButton extends FrameLayout {
 
     @Override
     public void setEnabled(boolean enabled) {
-         super.setEnabled(enabled);
-         button.setEnabled(enabled);
+        super.setEnabled(enabled);
+        button.setEnabled(enabled);
     }
 
-    public void showProgress(boolean enabled){
+    public void showProgress(boolean enabled) {
         progressBar.setVisibility(enabled ? VISIBLE : GONE);
         button.setText(enabled ? "" : text);
     }
